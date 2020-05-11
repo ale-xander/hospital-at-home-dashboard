@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script defer src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+    <title>Hospital@Home</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="top-nav">
+            <strong>Menu</strong>
+            <strong>Help</strong>
+            <strong>Account</strong>
+    </div>
+    </div>
+    <div class="dashboard">
+        
+        <div class="dashboard-nav">
+            <img src="DigitalHospital_logo_HH_newlogo white.png" alt="Logo" width="250">
+        </div>
+        <div class="nav">
+            Dashboard <br>
+            Patient View <br>
+            Medical History <br>
+            Text Patient <br>
+            Call Patient <br>
+            Call Emergency <br>
+
+        </div>
+        <div class="cases-container"></div>
+        <div class="cases-map">
+            <div id="map"></div>
+        </div>
+        <div class="cases-graph">
+            <figure class="highcharts-figure">
+                <div id="container"></div>
+            </figure>
+        </div>
+        <div class="big-table">
+            <ul class="table-header">
+                <li>Patient ID</li>
+                <li>Age</li>
+                <li>Location</li>
+                <li>Vitals</li>
+                <li>Symptoms Span</li>
+                <li>Diagnosis Span</li>
+                <li>Risk Score</li>
+                <li>Status</li>
+            </ul>
+            <ul id="patients"></ul>
+        </div>
+    </div>
+
+<!-- SCRIPTS -->
+    <!-- Google Maps -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDzE3LDM0wU9tckuyGjsxo6dJhAG5b3lY&callback=initMap">
+    </script>
+
+    <!-- Google Firebase -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
+    <script type='text/javascript'>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDDzE3LDM0wU9tckuyGjsxo6dJhAG5b3lY",
+            authDomain: "black-backup-275318.firebaseapp.com",
+            databaseURL: "https://black-backup-275318.firebaseio.com",
+            projectId: "black-backup-275318",
+            storageBucket: "black-backup-275318.appspot.com",
+            messagingSenderId: "529142485324",
+            appId: "1:529142485324:web:aef8af1321abd5152e3fe9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+
+<!-- HIGHCHARTS -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    
+</body>
+
+</html>

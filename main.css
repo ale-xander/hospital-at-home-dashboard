@@ -17,6 +17,9 @@
     --Gray-6: #F6F6F6;
     --top-nav-blue: #03256C;
 }
+a{
+    text-decoration: none;
+}
 body{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: larger;
@@ -37,10 +40,10 @@ body{
 }
 .nav {
     position: absolute;
-    width: 188.05px;
-    height: 227px;
+    width: 176.8px;
+    height: 109px;
     left: 42px;
-    top: 296px;
+    top: 520px;
 }
 .big-table {
     position: absolute;
@@ -48,6 +51,12 @@ body{
     height: 742px;
     left: 235px;
     top: 450px;
+}
+.patient-list{
+    background-color: var(--Gray-6);
+    height: 50vh;
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.35);
+    border-radius: 10px
 }
 
 .cases-container {
@@ -76,6 +85,10 @@ body{
 
 #map {
     width: 425.86px;
+    height: 326.19px;
+}
+#static-map {
+    /* width: 425.86px; */
     height: 326.19px;
 }
 
@@ -127,6 +140,99 @@ span{
     padding-right: 50px;
 }
 
+/* ----------- Patient View -----------*/
+.rectangle-13{
+    position: absolute;
+    width: 1090px;
+    height: 930px;
+    left: 262px;
+    top: 180px;
+
+    background: #FFFFFF;
+    /* box_dropshadow */
+
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.35);
+    border-radius: 30px;
+}
+.headshot {
+
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 300px;
+    top: 222px;
+
+    background: url(./public/assets/headshot03.jpg), #C4C4C4;
+    border-radius: 12.1818px;
+}
+.patient-general-info {
+    position: absolute;
+    width: 469.78px;
+    height: 104px;
+    left: 480px;
+    top: 226px;
+}
+
+.snapshot-status {
+    position: absolute;
+    width: 143px;
+    height: 152px;
+    left: 504px;
+    top: 434px;
+}
+
+.vitals {
+    position: absolute;
+    width: 481px;
+    height: 192.66px;
+    left: 644px;
+    top: 434px;
+    display: grid;
+    grid-template-columns: 50% 5% auto;
+}
+
+.vital-signs{
+    background-color: var(--Gray-6);
+    align-self: stretch;
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.35);
+    border-radius: 10px
+}
+.interventions {
+    background-color: var(--Gray-6);
+    align-self: stretch;
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.35);
+    border-radius: 10px
+}
+
+.ecg {
+    position: absolute;
+    width: 621px;
+    height: 150px;
+    left: 504px;
+    top: 640px;
+    
+}
+
+.messages{
+    position: absolute;
+    width: 620px;
+    height: 240px;
+    left: 504px;
+    top: 792px;
+}
+table{
+    table-layout: auto;
+    width: 100%;    
+}
+
+
+.patient-dash-nav{
+    position: absolute;
+width: 188.05px;
+height: 227px;
+left: 42px;
+top: 293px;
+}
 
 /* ----------- Highcharts -----------*/
 
